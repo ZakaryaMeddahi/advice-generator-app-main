@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* color palette */
+  --primary-color-light-cyan: hsl(193, 38%, 86%);
+  --primary-color-neon-green: hsl(150, 100%, 66%);
+  --neutral-color-grayish-blue: hsl(217, 19%, 38%);
+  --neutral-color-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-color-dark-blue: hsl(218, 23%, 16%);
+
+  /* Typography */
+  --font-family: 'Manrope', sans-serif;
+  --font-size: 28px;
+  --font-weight: 800;
+
+  /* Button */
+  --button-size: 70px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--neutral-color-dark-blue);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.card {
+  /* min-height: 300px; */
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--neutral-color-dark-grayish-blue);
+  border-radius: 10px;
+  padding: 45px 20px 70px;
+  position: relative;
+  box-shadow: 0 0 10px 2px var(--neutral-color-dark-grayish-blue);
+}
+
+.advice-id {
+  font-size: small;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--primary-color-neon-green);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#advice {
+  font-size: var(--font-size);
+  text-align: center;
+  color: var(--primary-color-light-cyan);
+  margin-bottom: 30px;
+}
+
+.divider {
+  height: 16px;
+  width: 295px;
+  background-image: url('./images/pattern-divider-mobile.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: absolute;
+  bottom: 70px;
+  right: calc(50% - (295px / 2)); */
+  margin: 0 auto;
+}
+
+#dice-button {
+  background-color: var(--primary-color-neon-green);
+  width: var(--button-size);
+  height: var(--button-size);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: calc(50% - (70px / 2));
+  bottom: -35px;
+  transition: 0.5s ease all;
+}
+
+#dice-button:hover {
+  box-shadow: 0 0 10px 2px var(--primary-color-neon-green);
+}
+
+@media (min-width: 600px) {
+  .divider {
+    background-image: url('./images/pattern-divider-desktop.svg');
+    width: 400px;
+    right: calc(50% - (400px / 2));
+  }
+}
