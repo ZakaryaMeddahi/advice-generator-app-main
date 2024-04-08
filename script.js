@@ -27,6 +27,6 @@ const getRandomAdvice = async (url) => {
   }
 };
 
-// window.onload = async () => await getRandomAdvice('advice');
+window.onload = async () => await getRandomAdvice('advice');
 
 button.onclick = async () => await getRandomAdvice('advice');
